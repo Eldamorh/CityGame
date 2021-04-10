@@ -6,7 +6,7 @@
   <title>Города</title>
  </head>
  <body>
-  <form action="" th:action="@{/game}" method="post">
+  <form method="post">
     <label for="lname">${message}</label>
     <input type="text" id="fname" name="fname"><br><br>
     <input type="submit" value="Отправить">

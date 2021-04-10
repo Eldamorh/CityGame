@@ -1,10 +1,8 @@
 package com.eldus.conf;
 
 
-import com.eldus.CityService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
@@ -13,14 +11,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class Config {
 
     @Bean
-    public CityService cityService(JdbcTemplate jdbcTemplate){
-        return new CityService(jdbcTemplate);
-    }
-
-
-    @Bean
     public InternalResourceViewResolver jspViewResolver() {
-        InternalResourceViewResolver resolver= new InternalResourceViewResolver();
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("WEB-INF/jsp/");
         resolver.setSuffix(".jsp");
         return resolver;
